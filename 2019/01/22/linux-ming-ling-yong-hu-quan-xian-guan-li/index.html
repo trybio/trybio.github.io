@@ -249,13 +249,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hello World
+                        Linux命令-用户、权限管理
                     </div>
                 </div>
             </div>
@@ -273,30 +273,304 @@
     <div class="card">
         <div class="card-content article-info">
             
+            <div class="article-tag">
+                
+                <a href="/tags/Linux/" target="_blank">
+                    <span class="chip bg-color">Linux</span>
+                </a>
+                
+            </div>
+            
             <div class="post-info">
+                
+                <span class="post-cate">
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/Linux/" class="post-category" target="_blank">
+                        Linux
+                    </a>
+                    
+                </span>
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2018-10-14
+                    <i class="fa fa-clock-o fa-fw"></i>2019-01-22
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
+                <h2 id="Linux命令-用户、权限管理"><a href="#Linux命令-用户、权限管理" class="headerlink" title="Linux命令-用户、权限管理"></a>Linux命令-用户、权限管理</h2><p>用户是Unix/Linux系统工作中重要的一环，用户管理包括用户与组账号的管理。</p>
+<p>在Unix/Linux系统中，不论是由本机或是远程登录系统，每个系统都必须拥有一个账号，并且对于不同的系统资源拥有不同的使用权限。</p>
+<p>Unix/Linux系统中的root账号通常用于系统的维护和管理，它对Unix/Linux操作系统的所有部分具有不受限制的访问权限。</p>
+<p>在Unix/Linux安装的过程中，系统会自动创建许多用户账号，而这些默认的用户就称为“标准用户”。</p>
+<p>在大多数版本的Unix/Linux中，都不推荐直接使用root账号登录系统。</p>
+<h3 id="查看当前用户：whoami"><a href="#查看当前用户：whoami" class="headerlink" title="查看当前用户：whoami"></a>查看当前用户：whoami</h3><p>whoami该命令用户查看当前系统当前账号的用户名。可通过cat /etc/passwd查看系统用户信息。</p>
+<p>由于系统管理员通常需要使用多种身份登录系统，例如通常使用普通用户登录系统，然后再以su命令切换到root身份对传统进行管理。这时候就可以使用whoami来查看当前用户的身份。</p>
+<pre class=" language-bash"><code class="language-bash">sun@sun-VirtualBox:/$ <span class="token function">whoami</span>
+sun
+sun@sun-VirtualBox:/$ 
 </code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
+<h3 id="查看登录用户：who"><a href="#查看登录用户：who" class="headerlink" title="查看登录用户：who"></a>查看登录用户：who</h3><p>who命令用于查看当前所有登录系统的用户信息。</p>
+<p>常用选项：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">选项</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-m或am I</td>
+<td style="text-align:center">只显示运行who命令的用户名、登录终端和登录时间</td>
+</tr>
+<tr>
+<td style="text-align:center">-q或–count</td>
+<td style="text-align:center">只显示用户的登录账号和登录用户的数量</td>
+</tr>
+<tr>
+<td style="text-align:center">-u或–heading</td>
+<td style="text-align:center">显示列标题</td>
+</tr>
+</tbody>
+</table>
+<h3 id="退出登录账户：-exit"><a href="#退出登录账户：-exit" class="headerlink" title="退出登录账户： exit"></a>退出登录账户： exit</h3><p>如果是图形界面，退出当前终端；</p>
+<p>如果是使用ssh远程登录，退出登陆账户；</p>
+<p>如果是切换后的登陆用户，退出则返回上一个登陆账号。</p>
+<h3 id="添加用户账号：useradd"><a href="#添加用户账号：useradd" class="headerlink" title="添加用户账号：useradd"></a>添加用户账号：useradd</h3><p>在Unix/Linux中添加用户账号可以使用adduser或useradd命令，因为adduser命令是指向useradd命令的一个链接，因此，这两个命令的使用格式完全一样。</p>
+<p>useradd命令的使用格式如下： useradd [参数] 新建用户账号</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">选项</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-d</td>
+<td style="text-align:left">指定用户登录系统时的主目录，如果不使用该参数，系统自动在/home目录下建立与用户名同名目录为主目录</td>
+</tr>
+<tr>
+<td style="text-align:center">-m</td>
+<td style="text-align:left">自动建立目录</td>
+</tr>
+<tr>
+<td style="text-align:center">-g</td>
+<td style="text-align:left">指定组名称</td>
+</tr>
+</tbody>
+</table>
+<p>相关说明：</p>
+<ul>
+<li>Linux每个用户都要有一个主目录，主目录就是第一次登陆系统，用户的默认当前目录(/home/用户)；</li>
+<li>每一个用户必须有一个主目录，所以用useradd创建用户的时候，一定给用户指定一个主目录；</li>
+<li>用户的主目录一般要放到根目录的home目录下，用户的主目录和用户名是相同的；</li>
+<li>如果创建用户的时候，不指定组名，那么系统会自动创建一个和用户名一样的组名。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">命令</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">useradd -d /home/abc abc -m</td>
+<td style="text-align:left">创建abc用户，如果/home/abc目录不存在，就自动创建这个目录，同时用户属于abc组</td>
+</tr>
+<tr>
+<td style="text-align:center">useradd -d /home/a a -g test -m</td>
+<td style="text-align:left">创建一个用户名字叫a，主目录在/home/a，如果主目录不存在，就自动创建主目录，同时用户属于test组</td>
+</tr>
+<tr>
+<td style="text-align:center">cat /etc/passwd</td>
+<td style="text-align:left">查看系统当前用户名</td>
+</tr>
+</tbody>
+</table>
+<h3 id="设置用户密码：passwd"><a href="#设置用户密码：passwd" class="headerlink" title="设置用户密码：passwd"></a>设置用户密码：passwd</h3><p>在Unix/Linux中，超级用户可以使用passwd命令为普通用户设置或修改用户口令。用户也可以直接使用该命令来修改自己的口令，而无需在命令后面使用用户名</p>
+<h3 id="删除用户：userdel"><a href="#删除用户：userdel" class="headerlink" title="删除用户：userdel"></a>删除用户：userdel</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">userdel abc(用户名)</td>
+<td style="text-align:center">删除abc用户，但不会自动删除用户的主目录</td>
+</tr>
+<tr>
+<td style="text-align:center">userdel -r abc(用户名)</td>
+<td style="text-align:center">删除用户，同时删除用户的主目录</td>
+</tr>
+</tbody>
+</table>
+<h3 id="切换用户：su"><a href="#切换用户：su" class="headerlink" title="切换用户：su"></a>切换用户：su</h3><p>可以通过su命令切换用户，su后面可以加“-”。su和su –命令不同之处在于，su -切换到对应的用户时会将当前的工作目录自动转换到切换后的用户主目录：</p>
+<p>注意：如果是ubuntu平台，需要在命令前加“sudo”，如果在某些操作需要管理员才能操作，ubuntu无需切换到root用户即可操作，只需加“sudo”即可。sudo是ubuntu平台下允许系统管理员让普通用户执行一些或者全部的root命令的一个工具，减少了root 用户的登陆和管理时间，提高了安全性。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">su</td>
+<td style="text-align:center">切换到root用户</td>
+</tr>
+<tr>
+<td style="text-align:center">su root</td>
+<td style="text-align:center">切换到root用户</td>
+</tr>
+<tr>
+<td style="text-align:center">su -</td>
+<td style="text-align:center">切换到root用户，同时切换目录到/root</td>
+</tr>
+<tr>
+<td style="text-align:center">su - root</td>
+<td style="text-align:center">切换到root用户，同时切换目录到/root</td>
+</tr>
+<tr>
+<td style="text-align:center">su 普通用户</td>
+<td style="text-align:center">切换到普通用户</td>
+</tr>
+<tr>
+<td style="text-align:center">su - 普通用户</td>
+<td style="text-align:center">切换到普通用户，同时切换普通用户所在的目录</td>
+</tr>
+</tbody>
+</table>
+<h3 id="查看有哪些用户组"><a href="#查看有哪些用户组" class="headerlink" title="查看有哪些用户组"></a>查看有哪些用户组</h3><p>方法一:</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">cat</span> /etc/group
 </code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
+<p>方法二:</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">groupmod</span> +三次tab键
 </code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
+<h4 id="为创建的普通用户添加sudo权限"><a href="#为创建的普通用户添加sudo权限" class="headerlink" title="为创建的普通用户添加sudo权限"></a>为创建的普通用户添加sudo权限</h4><p>新创建的用户，默认不能sudo，需要进行一下操作</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">usermod</span> -a -G adm 用户名
+
+<span class="token function">sudo</span> <span class="token function">usermod</span> -a -G <span class="token function">sudo</span> 用户名
 </code></pre>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h3 id="usermod-g-与-G的区别"><a href="#usermod-g-与-G的区别" class="headerlink" title="usermod -g 与 -G的区别"></a>usermod -g 与 -G的区别</h3><pre class=" language-bash"><code class="language-bash">-g用来制定这个用户默认的用户组
+
+-G一般配合<span class="token string">'-a'</span>来完成向其它组添加
+</code></pre>
+<h3 id="修改文件权限：chmod"><a href="#修改文件权限：chmod" class="headerlink" title="修改文件权限：chmod"></a>修改文件权限：chmod</h3><p>chmod 修改文件权限有两种使用格式：字母法与数字法。</p>
+<p>字母法：chmod u/g/o/a +/-/= rwx 文件</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">[ u/g/o/a ]</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">u</td>
+<td style="text-align:center">user 表示该文件的所有者</td>
+</tr>
+<tr>
+<td style="text-align:center">g</td>
+<td style="text-align:center">group 表示与该文件的所有者属于同一组( group )者，即用户组</td>
+</tr>
+<tr>
+<td style="text-align:center">o</td>
+<td style="text-align:center">other 表示其他以外的人</td>
+</tr>
+<tr>
+<td style="text-align:center">a</td>
+<td style="text-align:center">all 表示这三者皆是</td>
+</tr>
+</tbody>
+</table>
+<p>[ +-= ]</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">[ +-= ]</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">+</td>
+<td style="text-align:center">增加权限</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:center">撤销权限</td>
+</tr>
+<tr>
+<td style="text-align:center">=</td>
+<td style="text-align:center">设定权限</td>
+</tr>
+</tbody>
+</table>
+<p>rwx</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">rwx</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">r</td>
+<td style="text-align:center">read 表示可读取，对于一个目录，如果没有r权限，那么就意味着不能通过ls查看这个目录的内容。</td>
+</tr>
+<tr>
+<td style="text-align:center">w</td>
+<td style="text-align:center">write 表示可写入，对于一个目录，如果没有w权限，那么就意味着不能在目录下创建新的文件。</td>
+</tr>
+<tr>
+<td style="text-align:center">x</td>
+<td style="text-align:center">excute 表示可执行，对于一个目录，如果没有x权限，那么就意味着不能通过cd进入这个目录。</td>
+</tr>
+</tbody>
+</table>
+<p>数字法：“rwx” 这些权限也可以用数字来代替</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字母</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">r</td>
+<td style="text-align:center">读取权限，数字代号为 “4”</td>
+</tr>
+<tr>
+<td style="text-align:center">w</td>
+<td style="text-align:center">写入权限，数字代号为 “2”</td>
+</tr>
+<tr>
+<td style="text-align:center">x</td>
+<td style="text-align:center">执行权限，数字代号为 “1”</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:center">不具任何权限，数字代号为 “0”</td>
+</tr>
+</tbody>
+</table>
+<p>如执行：chmod u=rwx,g=rx,o=r filename 就等同于：chmod u=7,g=5,o=4 filename</p>
+<p>chmod 751 file：</p>
+<ul>
+<li>文件所有者：读、写、执行权限</li>
+<li>同组用户：读、执行的权限</li>
+<li>其它用户：执行的权限</li>
+</ul>
+<p>注意：如果想递归所有目录加上相同权限，需要加上参数“ -R ”。 如：chmod 777 test/ -R 递归 test 目录下所有文件加 777 权限</p>
 
             </div>
             <hr/>
@@ -435,7 +709,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://trybio.github.io" class="b-link-green">生信小札</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/10/14/hello-world/" class="b-link-green">Hello World</a>
+                    <a href="/2019/01/22/linux-ming-ling-yong-hu-quan-xian-guan-li/" class="b-link-green">Linux命令-用户、权限管理</a>
                 </p>
             </div>
         </div>
@@ -457,7 +731,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2018-10-14T19-23-26',
+        id: '2019-01-22T13-57-09',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -477,28 +751,30 @@
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">上一篇</div>
             <div class="card">
-                <a href="/2018/10/17/sheng-xin-xue-xi-cong-zhi-zuo-bo-ke-kai-shi/">
+                <a href="/2019/01/22/linux-ming-ling-xi-tong-guan-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="生信学习从制作博客开始">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Linux命令-系统管理">
                         
-                        <span class="card-title">生信学习从制作博客开始</span>
+                        <span class="card-title">Linux命令-系统管理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">借用名言：培根说：读书使人充实，讨论使人机敏，写作使人精确。
-最近用hexo搭建了一个博客系统并部署在了GitHub，希望通过写作来记录自己的生信学习之路，好让我更好的去思考问题；也希望以这种方式来监督提醒自己在这条喜欢的路上走下去，再回首</div>
+                    <div class="summary">1.查看当前日历：calcal命令用于查看当前日历，-y显示整年日历
+2.显示或设置时间：date设置时间格式（需要管理员权限）：
+date [MMDDhhmm[[CC]YY][.ss]] +format
+CC为年前两位yy为年的后两位，前</div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-10-17
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-22
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/博客/" class="post-category" target="_blank">
-                                    博客
+                            <a href="/categories/Linux/" class="post-category" target="_blank">
+                                    Linux
                                 </a>
                             
                             
@@ -508,8 +784,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/博客/" target="_blank">
-                        <span class="chip bg-color">博客</span>
+                    <a href="/tags/Linux/" target="_blank">
+                        <span class="chip bg-color">Linux</span>
                     </a>
                     
                 </div>
@@ -519,32 +795,45 @@
         
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">本篇</div>
+            <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2018/10/14/hello-world/">
+                <a href="/2019/01/22/linux-chang-yong-ji-ben-ming-ling/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Linux常用基本命令">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">Linux常用基本命令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex</div>
+                    <div class="summary">常用基本命令
+很多人可能在电视或电影中看到过类似的场景，黑客面对一个黑色的屏幕，上面飘着密密麻麻的字符，梆梆一顿敲，就完成了窃取资料的任务。
+Linux 刚出世时没有什么图形界面，所有的操作全靠命令完成，就如同电视里的黑客那样，充满了神秘与</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-10-14
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-22
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-user fa-fw"></i>
-                            生信小札
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Linux/" class="post-category" target="_blank">
+                                    Linux
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/" target="_blank">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

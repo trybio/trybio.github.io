@@ -249,13 +249,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hello World
+                        生信学习从制作博客开始
                     </div>
                 </div>
             </div>
@@ -273,30 +273,138 @@
     <div class="card">
         <div class="card-content article-info">
             
+            <div class="article-tag">
+                
+                <a href="/tags/博客/" target="_blank">
+                    <span class="chip bg-color">博客</span>
+                </a>
+                
+            </div>
+            
             <div class="post-info">
+                
+                <span class="post-cate">
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/博客/" class="post-category" target="_blank">
+                        博客
+                    </a>
+                    
+                </span>
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2018-10-14
+                    <i class="fa fa-clock-o fa-fw"></i>2018-10-17
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
+                <h2 id="借用名言："><a href="#借用名言：" class="headerlink" title="借用名言："></a>借用名言：</h2><p>培根说：读书使人充实，讨论使人机敏，写作使人精确。</p>
+<p>最近用hexo搭建了一个博客系统并部署在了GitHub，希望通过写作来记录自己的生信学习之路，好让我更好的去思考问题；也希望以这种方式来监督提醒自己在这条喜欢的路上走下去，再回首，我能看到一个不一样的自己，今天就将搭建过程分享给大家。</p>
+<h2 id="什么是hexo"><a href="#什么是hexo" class="headerlink" title="什么是hexo"></a>什么是hexo</h2><p>Hexo 是一个快速、简洁且高效的博客框架，Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<h2 id="安装前提"><a href="#安装前提" class="headerlink" title="安装前提"></a>安装前提</h2><p>hexo 是基于Node.js的，安装前首先要安装好Node.js。另外我们要将博客系统发布到gihub，所以git也是必不可少的。</p>
+<h2 id="Node-js安装"><a href="#Node-js安装" class="headerlink" title="Node.js安装"></a>Node.js安装</h2><p>Node.js是一个事件驱动I/O服务端JavaScript环境，基于Google的V8引擎，V8引擎执行Javascript的速度非常快，性能非常好。我们在windows环境下安装很方便，首先从<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>官网下载安装包，按照官网介绍安装即可。安装完成后，应出现以下效果，表示安装成功：</p>
+<pre class=" language-bash"><code class="language-bash">C:\Users\abc<span class="token operator">></span> node -v
+
+v8.12.0
 </code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
+<h2 id="安装GitHub"><a href="#安装GitHub" class="headerlink" title="安装GitHub"></a>安装GitHub</h2><p>Git是开源免费的分布式版本控制系统是用来处理代码量由小到大相关问题的。安装方式请参考Git官网，或者本站的Git相关内容。<br>安装完毕后，应出现如下效果，表示安装成功：</p>
+<pre class=" language-bash"><code class="language-bash">C:\Users\abc<span class="token operator">></span> <span class="token function">git</span> versiongit version 2.19.1.windows.1
 </code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>使用npm按照hexo即可，运行如下代码全局按照hexo-cli这个hexo的命令行工具</p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> -g hexo-cli
 </code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
+<p>安装完毕后，应出现如下效果，表示安装成功：</p>
+<pre class=" language-bash"><code class="language-bash">C:\Users\abc<span class="token operator">></span> hexo -vhexo-cli: 1.1.0os: Windows_NT 10.0.17134 win32 x64http_parser: 2.8.0node: 8.12.0v8: 6.2.414.66uv: 1.19.2zlib: 1.2.11ares: 1.10.1-DEVmodules: 57nghttp2: 1.32.0napi: 3openssl: 1.0.2picu: 60.1unicode: 10.0cldr: 32.0tz: 2017c
 </code></pre>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h2 id="Hexo建站"><a href="#Hexo建站" class="headerlink" title="Hexo建站"></a>Hexo建站</h2><p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件：</p>
+<pre class=" language-bash"><code class="language-bash">$ hexo init <span class="token operator">&lt;</span>folder<span class="token operator">></span>
+$ <span class="token function">cd</span> <span class="token operator">&lt;</span>folder<span class="token operator">></span>
+$ <span class="token function">npm</span> <span class="token function">install</span>
+</code></pre>
+<p>新建完成后，指定文件夹的目录如下：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token keyword">.</span>
+├── _config.yml
+├── package.json
+├── scaffolds
+├── <span class="token function">source</span>
+<span class="token operator">|</span>   ├── _drafts
+<span class="token operator">|</span>   └── _posts
+└── themes
+</code></pre>
+<p>此时一个基本的博客已经建立完毕了。</p>
+<h2 id="运行Hexo博客"><a href="#运行Hexo博客" class="headerlink" title="运行Hexo博客"></a>运行Hexo博客</h2><p>进入博客目录，执行 hexo server 即可运行hexo服务器。</p>
+<pre class=" language-bash"><code class="language-bash">D:\www\Hexo<span class="token operator">></span>hexo s
+INFO  Start processing
+INFO  Hexo is running at http://localhost:4000 <span class="token keyword">.</span> Press Ctrl+C to stop.
+</code></pre>
+<p>此时，浏览器访问<a href="http://localhost:4000，即可看到你的博客。" target="_blank" rel="noopener">http://localhost:4000，即可看到你的博客。</a><br>至此，hexo搭建的博客已经完成。该博客使用方法，如何发文章，分类，标签等操作请参考Hexo文档，本文不再赘述。</p>
+<h2 id="发布到GitHub"><a href="#发布到GitHub" class="headerlink" title="发布到GitHub"></a>发布到GitHub</h2><p>GitHub上允许我们搭建自己的静态站点，在不购买自己的服务器情况下，可以有自己的博客。<br>需要用到Hexo提供的发布相关功能，同时需要在github上做一定的配置。</p>
+<h2 id="注册GitHub"><a href="#注册GitHub" class="headerlink" title="注册GitHub"></a>注册GitHub</h2><blockquote>
+<p>已有账号的跳过此步骤</p>
+</blockquote>
+<p>注册操作，跟着GitHub引导完成即可，GitHub注册</p>
+<h2 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h2><p>登录后，创建新版本库<a href="https://github.com/new" target="_blank" rel="noopener">https://github.com/new</a><br>注意：版本库名字强烈建议是 <code>&lt;你的用户&gt;.github.io</code> 这种格式<br>创建完毕后，就可以使用  <code>&lt;你的用户&gt;.github.io</code> 这种方式访问你的github博客地址，但现在访问应该不会成功，因为是一个新创建的版本库，是空的，一无所有….。接下来就把我们本地的博客内容部署到这个github版本库上。</p>
+<h2 id="GitHub的SSH-keys设置"><a href="#GitHub的SSH-keys设置" class="headerlink" title="GitHub的SSH keys设置"></a>GitHub的SSH keys设置</h2><p>在部署之前，需要保证GitHub可以验证我们的机器，需要将本地的RAS-publicKey告知给GitHub，步骤如下：</p>
+<h3 id="本地RAS密钥对生成"><a href="#本地RAS密钥对生成" class="headerlink" title="本地RAS密钥对生成"></a>本地RAS密钥对生成</h3><p>进入到 用户目录/.ssh目录下，查看是否已经存在了， 私钥id_rsa 公钥id_rsa.pub</p>
+<pre class=" language-bash"><code class="language-bash">C:\Users\abc<span class="token operator">></span> <span class="token function">cd</span> .ssh
+C:\Users\abc\.ssh<span class="token operator">></span> <span class="token function">dir</span>
+-a----       2018/1/22    19:46           1679 id_rsa
+-a----       2018/1/22   19:46            403 id_rsa.pub
+</code></pre>
+<p>上面的输出表示已经存在。若不存在，执行 ssh-keygen 生成即可（持续回车即可）：</p>
+<pre class=" language-bash"><code class="language-bash">C:\Users\abc\.ssh<span class="token operator">></span> ssh-keygen.exe -t rsa
+Generating public/private rsa key pair.
+Enter <span class="token function">file</span> <span class="token keyword">in</span> <span class="token function">which</span> to save the key <span class="token punctuation">(</span>C:\Users\abc/.ssh/id_rsa<span class="token punctuation">)</span>:
+Enter passphrase <span class="token punctuation">(</span>empty <span class="token keyword">for</span> no passphrase<span class="token punctuation">)</span>:
+Enter same passphrase again:
+Your identification has been saved <span class="token keyword">in</span> C:\Users\abc/.ssh/id_rsa.
+Your public key has been saved <span class="token keyword">in</span> C:\Users\abc/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:ymf2laAmgHVsGakavggdXrzORtVRNxkuKYq444C5Irs kang@V1N3RYQG70NI7YD
+The key's randomart image is:
++---<span class="token punctuation">[</span>RSA 2048<span class="token punctuation">]</span>----+
+<span class="token operator">|</span>      <span class="token punctuation">..</span> <span class="token punctuation">..</span> +o   <span class="token operator">|</span>
+<span class="token operator">|</span>     <span class="token punctuation">..</span>o.  +<span class="token punctuation">..</span>   <span class="token operator">|</span>
+<span class="token operator">|</span>   <span class="token punctuation">..</span>.<span class="token operator">=</span><span class="token punctuation">..</span>.o <span class="token keyword">.</span>    <span class="token operator">|</span>
+<span class="token operator">|</span>  o+++<span class="token punctuation">..</span><span class="token punctuation">..</span> <span class="token keyword">.</span>     <span class="token operator">|</span>
+<span class="token operator">|</span> +o<span class="token operator">=</span>oo. S <span class="token keyword">.</span>      <span class="token operator">|</span>
+<span class="token operator">|</span>o.<span class="token operator">=</span>.oo <span class="token keyword">.</span> <span class="token keyword">.</span> <span class="token keyword">.</span> <span class="token keyword">.</span>   <span class="token operator">|</span>
+<span class="token operator">|</span><span class="token operator">=</span>.o<span class="token operator">=</span>  + *   o    <span class="token operator">|</span>
+<span class="token operator">|</span>++<span class="token punctuation">..</span>+  * <span class="token keyword">.</span> <span class="token keyword">.</span>     <span class="token operator">|</span>
+<span class="token operator">|</span>Eo<span class="token punctuation">..</span>      <span class="token keyword">.</span>      <span class="token operator">|</span>
++----<span class="token punctuation">[</span>SHA256<span class="token punctuation">]</span>-----+
+</code></pre>
+<blockquote>
+<p>-t rsa 表示使用的加密类型。生成过程可以输入一些信息，简单起见，全部回车即可<br>生成完毕后，目录中应该存在相应文件了。</p>
+</blockquote>
+<h3 id="告知GitHub公钥"><a href="#告知GitHub公钥" class="headerlink" title="告知GitHub公钥"></a>告知GitHub公钥</h3><p>在GitHub的用户设置中，找到ssh key的设置：SSH Keys<br>点击 New SSH Key 新建</p>
+<p>将生成的公钥id_rsa.pub内容拷贝到输入框中，起名标志即可。</p>
+<p>保存即可。此时GitHub已经和我们本地电脑建立的信任关系。我们就可以将内容发布到GitHub上了。</p>
+<p>###部署到GitHub<br>回到我们本地的博客项目中，hexo对于基于git的部署提供了一个工具hexo-deployer-git，我们直接安装使即可。</p>
+<p>安装 hexo-deployer-git</p>
+<pre class=" language-bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save
+</code></pre>
+<h3 id="修改博客的部署配置"><a href="#修改博客的部署配置" class="headerlink" title="修改博客的部署配置"></a>修改博客的部署配置</h3><p>需要指定部署类型，版本库地址，分支，消息等信息</p>
+<pre class=" language-bash"><code class="language-bash">/_config.yml
+deploy:
+  type: <span class="token function">git</span>
+  repo: https://github.com/yourusername/yourusername.github.io
+  branch: master
+</code></pre>
+<p>###执行部署<br>部署的过程，是将本地博客先生成静态文件，然后将静态文件发布到指定的版本库中。<br>因此总的过程应该是，清理之前的静态文件，生成新静态文件，发布到版本库 这个步骤，执行下面的代码即可：</p>
+<pre class=" language-bash"><code class="language-bash">$ hexo clean
+$ hexo deploy
+</code></pre>
+<blockquote>
+<p>部署deploy时会自动生成，因此可以省略 $ hexo generate 操作。<br>第一次部署的过程中，会出现要求输入GitHub账号信息的步骤，请输入即可：</p>
+</blockquote>
+<p>等等过后，如果出现 Deploy done，类似的信息，说明部署完成。</p>
+<p>也可以去版本库中查看是否已经存在代码了，版本库地址就是：<a href="https://github.com/yourusername/yourusername.github.io" target="_blank" rel="noopener">https://github.com/yourusername/yourusername.github.io</a></p>
+<p>部署完毕，就可以在 <code>yourusername.github.io</code> 看到你的博客了。</p>
+<h2 id="总述"><a href="#总述" class="headerlink" title="总述"></a>总述</h2><p> 完成以上部署后，博客完毕。写作流程就是，本地编辑md文件，本地预览ok后，发布到github即可！<br>写作过程，请参考：Hexo文档。</p>
 
             </div>
             <hr/>
@@ -435,7 +543,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://trybio.github.io" class="b-link-green">生信小札</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/10/14/hello-world/" class="b-link-green">Hello World</a>
+                    <a href="/2018/10/17/sheng-xin-xue-xi-cong-zhi-zuo-bo-ke-kai-shi/" class="b-link-green">生信学习从制作博客开始</a>
                 </p>
             </div>
         </div>
@@ -457,7 +565,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2018-10-14T19-23-26',
+        id: '2018-10-17T19-48-02',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -477,28 +585,27 @@
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">上一篇</div>
             <div class="card">
-                <a href="/2018/10/17/sheng-xin-xue-xi-cong-zhi-zuo-bo-ke-kai-shi/">
+                <a href="/2019/01/22/gong-yu-shan-qi-shi-bi-xian-li-qi-qi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="生信学习从制作博客开始">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="工欲善其事必先利其器">
                         
-                        <span class="card-title">生信学习从制作博客开始</span>
+                        <span class="card-title">工欲善其事必先利其器</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">借用名言：培根说：读书使人充实，讨论使人机敏，写作使人精确。
-最近用hexo搭建了一个博客系统并部署在了GitHub，希望通过写作来记录自己的生信学习之路，好让我更好的去思考问题；也希望以这种方式来监督提醒自己在这条喜欢的路上走下去，再回首</div>
+                    <div class="summary">大道至简生物信息的入门不仅仅要扎实的生物基础，还要熟练的使用编程语言，多数的科学团队至少会同时使用R与Python。在学习中我认为每次只学习并精通一种工具，潜心学习一种工具，比同时学习多个工具掌握的更快，无论工作学习中都应该努力的去学习新的</div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-10-17
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-22
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/博客/" class="post-category" target="_blank">
-                                    博客
+                            <a href="/categories/Linux/" class="post-category" target="_blank">
+                                    Linux
                                 </a>
                             
                             
@@ -508,8 +615,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/博客/" target="_blank">
-                        <span class="chip bg-color">博客</span>
+                    <a href="/tags/Linux/" target="_blank">
+                        <span class="chip bg-color">Linux</span>
                     </a>
                     
                 </div>
@@ -519,7 +626,7 @@
         
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">本篇</div>
+            <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
                 <a href="/2018/10/14/hello-world/">
                     <div class="card-image">
@@ -544,7 +651,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>

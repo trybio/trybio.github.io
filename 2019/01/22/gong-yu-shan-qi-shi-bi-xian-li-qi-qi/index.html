@@ -249,13 +249,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hello World
+                        工欲善其事必先利其器
                     </div>
                 </div>
             </div>
@@ -273,30 +273,120 @@
     <div class="card">
         <div class="card-content article-info">
             
+            <div class="article-tag">
+                
+                <a href="/tags/Linux/" target="_blank">
+                    <span class="chip bg-color">Linux</span>
+                </a>
+                
+            </div>
+            
             <div class="post-info">
+                
+                <span class="post-cate">
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/Linux/" class="post-category" target="_blank">
+                        Linux
+                    </a>
+                    
+                </span>
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2018-10-14
+                    <i class="fa fa-clock-o fa-fw"></i>2019-01-22
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <h2 id="大道至简"><a href="#大道至简" class="headerlink" title="大道至简"></a>大道至简</h2><p>生物信息的入门不仅仅要扎实的生物基础，还要熟练的使用编程语言，多数的科学团队至少会同时使用R与Python。在学习中我认为每次只学习并精通一种工具，潜心学习一种工具，比同时学习多个工具掌握<br>的更快，无论工作学习中都应该努力的去学习新的知识，但一定要充分的理解原有知识后，再去学习感兴趣的新知识。</p>
+<h2 id="千里之行，始于足下"><a href="#千里之行，始于足下" class="headerlink" title="千里之行，始于足下"></a>千里之行，始于足下</h2><p>大多数生信分析软件都是基于Linux开发的，当你学会了Linux之后，那你就可以在命令学习使用Bwa，samtools这些已有的工具，可以走标准化的分流程了。学习Linux首先从认识系统开始：</p>
+<h2 id="Linux的不同版本以及应用领域"><a href="#Linux的不同版本以及应用领域" class="headerlink" title="Linux的不同版本以及应用领域"></a>Linux的不同版本以及应用领域</h2><h3 id="1-Linux内核"><a href="#1-Linux内核" class="headerlink" title="1.Linux内核"></a>1.Linux内核</h3><p>内核(kernel)是系统的心脏，是运行程序和管理像磁盘和打印机等硬件设备的核心程序，它提供了一个在裸设备与应用程序间的抽象层。</p>
+<p>Linux内核版本又分为稳定版和开发版，两种版本是相互关联，相互循环：</p>
+<pre><code>稳定版：具有工业级强度，可以广泛地应用和部署。新的稳定版相对于较旧的只是修正一些bug或加入一些新的驱动程序。
+开发版：由于要试验各种解决方案，所以变化很快。
+</code></pre><p>内核源码网址：<a href="http://www.kernel.org" target="_blank" rel="noopener">http://www.kernel.org</a> 所有来自全世界的对Linux源码的修改最终都会汇总到这个网站，由Linus领导的开源社区对其进行甄别和修改最终决定是否进入到Linux主线内核源码中。</p>
+<h3 id="2-Linux发行版本"><a href="#2-Linux发行版本" class="headerlink" title="2.Linux发行版本"></a>2.Linux发行版本</h3><p>Linux发行版 (也被叫做 GNU/Linux 发行版) 通常包含了包括桌面环境、办公套件、媒体播放器、数据库等应用软件。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">排名</th>
+<th style="text-align:center">2016</th>
+<th style="text-align:center">2015</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Linux Mint</td>
+<td style="text-align:center">Linux Mint</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Debian</td>
+<td style="text-align:center">Debian</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">Ubuntu</td>
+<td style="text-align:center">Ubuntu</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">openSUSE</td>
+<td style="text-align:center">openSUSE</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">redhat</td>
+<td style="text-align:center">Fedora</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">Fedora</td>
+<td style="text-align:center">Mageia</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">Manjaro</td>
+<td style="text-align:center">Manjaro</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">Mageia</td>
+<td style="text-align:center">CentOS</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">CentOS</td>
+<td style="text-align:center">Arch</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center">Arch</td>
+<td style="text-align:center">Elementary</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-应用领域"><a href="#3-应用领域" class="headerlink" title="3.应用领域"></a>3.应用领域</h3><h3 id="个人桌面领域"><a href="#个人桌面领域" class="headerlink" title="个人桌面领域"></a>个人桌面领域</h3><p>此领域是传统linux应用最薄弱的环节，传统linux由于界面简单、操作复杂、应用软件少的缺点，一直被windows所压制，但近些年来随着ubuntu、fedora等优秀桌面环境的兴起，同时各大硬件厂商对其支持的加大，linux在个人桌面领域的占有率在逐渐的提高</p>
+<p>典型代表：ubuntu、fedora、suse linux</p>
+<p>在Ubuntu中玩QQ</p>
+<h4 id="服务器领域"><a href="#服务器领域" class="headerlink" title="服务器领域"></a>服务器领域</h4><p>linux在服务器领域的应用是其重要分支</p>
+<p>linux免费、稳定、高效等特点在这里得到了很好的体现，但早期因为维护、运行等原因同样受到了很大的限制，但近些年来linux服务器市场得到了飞速的提升，尤其在一些高端领域尤为广泛<br>典型代表：</p>
+<ul>
+<li>Red Hat公司的AS系列</li>
+</ul>
+<ul>
+<li>完全开源的debian系列</li>
+</ul>
+<ul>
+<li>suse EnterPrise 11系列等</li>
+</ul>
+<h4 id="嵌入式领域"><a href="#嵌入式领域" class="headerlink" title="嵌入式领域"></a>嵌入式领域</h4><p>近些年来linux在嵌入式领域的应用得到了飞速的提高</p>
+<p>linux运行稳定、对网络的良好支持性、低成本，且可以根据需要进行软件裁剪，内核最小可以达到几百KB等特点，使其近些年来在嵌入式领域的应用得到非常大的提高</p>
+<p>主要应用：机顶盒、数字电视、网络电话、程控交换机、手机、PDA、等都是其应用领域，得到了摩托罗拉、三星、NEC、Google等公司的大力推广</p>
 
             </div>
             <hr/>
@@ -435,7 +525,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://trybio.github.io" class="b-link-green">生信小札</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/10/14/hello-world/" class="b-link-green">Hello World</a>
+                    <a href="/2019/01/22/gong-yu-shan-qi-shi-bi-xian-li-qi-qi/" class="b-link-green">工欲善其事必先利其器</a>
                 </p>
             </div>
         </div>
@@ -457,7 +547,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2018-10-14T19-23-26',
+        id: '2019-01-22T10-11-44',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -477,6 +567,50 @@
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">上一篇</div>
             <div class="card">
+                <a href="/2019/01/22/linux-mu-lu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Linux命令-文件、磁盘管理">
+                        
+                        <span class="card-title">Linux命令-文件、磁盘管理</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">文件管理1.查看文件信息：lsls是英文单词list的简写，其功能为列出目录的内容，是用户最常用的命令之一，它类似于DOS下的dir命令。
+Linux文件或者目录名称最长可以有265个字符，“.”代表当前目录，“..”代表上一级目录，以“.</div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-22
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Linux/" class="post-category" target="_blank">
+                                    Linux
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/" target="_blank">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">下一篇</div>
+            <div class="card">
                 <a href="/2018/10/17/sheng-xin-xue-xi-cong-zhi-zuo-bo-ke-kai-shi/">
                     <div class="card-image">
                         
@@ -490,9 +624,9 @@
                     <div class="summary">借用名言：培根说：读书使人充实，讨论使人机敏，写作使人精确。
 最近用hexo搭建了一个博客系统并部署在了GitHub，希望通过写作来记录自己的生信学习之路，好让我更好的去思考问题；也希望以这种方式来监督提醒自己在这条喜欢的路上走下去，再回首</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-10-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-10-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -513,38 +647,6 @@
                     </a>
                     
                 </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">本篇</div>
-            <div class="card">
-                <a href="/2018/10/14/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex</div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-10-14
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-user fa-fw"></i>
-                            生信小札
-                            
-                        </span>
-                    </div>
-                </div>
-
                 
             </div>
         </div>

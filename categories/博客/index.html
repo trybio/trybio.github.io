@@ -279,38 +279,40 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
     
 
-<div id="tags" class="container chip-container">
+<div id="category-cloud" class="container chip-container">
     <div class="card">
         <div class="card-content">
-            <div class="tag-title center-align">文章标签</div>
+            <div class="tag-title center-align">文章分类</div>
             <div class="tag-chips">
                 
                 
-                <a href="/tags/Linux/" title="Linux: 6">
+                
+                <a href="/categories/Linux/" title="Linux: 6">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Linux" style="background-color: #F9EBEA;">Linux
+                            style="background-color: #F9EBEA;">Linux
                         <span class="tag-length">6</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/vim/" title="vim: 2">
+                <a href="/categories/vim/" title="vim: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="vim" style="background-color: #F5EEF8;">vim
+                            style="background-color: #F5EEF8;">vim
                         <span class="tag-length">2</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/博客/" title="博客: 1">
+                <a href="/categories/博客/" title="博客: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="博客" style="background-color: #D5F5E3;">博客
+                             chip-active "
+                            style="background-color: #D5F5E3;">博客
                         <span class="tag-length">1</span>
                     </span>
                 </a>
+                
                 
             </div>
         </div>
@@ -318,31 +320,57 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 </div>
 
     
-    <link rel="stylesheet" type="text/css" href="/libs/jqcloud/jqcloud.css">
-<style type="text/css">
-    #tag-wordcloud {
-        width: 100%;
-        height: 300px;
-    }
-</style>
 
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="tag-wordcloud" class="card-content"></div>
-    </div>
-</div>
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2018/10/17/sheng-xin-xue-xi-cong-zhi-zuo-bo-ke-kai-shi/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="生信学习从制作博客开始">
+                            
+                            <span class="card-title">生信学习从制作博客开始</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary">借用名言：培根说：读书使人充实，讨论使人机敏，写作使人精确。
+最近用hexo搭建了一个博客系统并部署在了GitHub，希望通过写作来记录自己</div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-10-17
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/博客/" class="post-category" target="_blank">
+                                    博客
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
 
-<script type="text/javascript" src="/libs/jqcloud/jqcloud-1.0.4.min.js"></script>
-<script type="text/javascript">
-    
-
-    $('#tag-wordcloud').jQCloud([{"text":"Linux","weight":6,"link":"http://trybio.github.io/tags/Linux/"},{"text":"vim","weight":2,"link":"http://trybio.github.io/tags/vim/"},{"text":"博客","weight":1,"link":"http://trybio.github.io/tags/博客/"}], {
-        autoResize: true
-    });
-</script>
-    
-
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/博客/" target="_blank">
+                            <span class="chip bg-color">博客</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
+
 
 <footer class="page-footer bg-color">
     <div class="container row center-align">

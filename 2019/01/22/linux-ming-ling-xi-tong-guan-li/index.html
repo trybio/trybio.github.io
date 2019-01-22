@@ -249,13 +249,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hello World
+                        Linux命令-系统管理
                     </div>
                 </div>
             </div>
@@ -273,30 +273,221 @@
     <div class="card">
         <div class="card-content article-info">
             
+            <div class="article-tag">
+                
+                <a href="/tags/Linux/" target="_blank">
+                    <span class="chip bg-color">Linux</span>
+                </a>
+                
+            </div>
+            
             <div class="post-info">
+                
+                <span class="post-cate">
+                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                    
+                    <a href="/categories/Linux/" class="post-category" target="_blank">
+                        Linux
+                    </a>
+                    
+                </span>
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2018-10-14
+                    <i class="fa fa-clock-o fa-fw"></i>2019-01-22
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
+                <h3 id="1-查看当前日历：cal"><a href="#1-查看当前日历：cal" class="headerlink" title="1.查看当前日历：cal"></a>1.查看当前日历：cal</h3><p>cal命令用于查看当前日历，-y显示整年日历</p>
+<h3 id="2-显示或设置时间：date"><a href="#2-显示或设置时间：date" class="headerlink" title="2.显示或设置时间：date"></a>2.显示或设置时间：date</h3><p>设置时间格式（需要管理员权限）：</p>
+<p><code>date [MMDDhhmm[[CC]YY][.ss]] +format</code></p>
+<p>CC为年前两位yy为年的后两位，前两位的mm为月，后两位的mm为分钟，dd为天，hh为小时，ss为秒。如： date 010203042016.55。</p>
+<p>显示时间格式（date ‘+%y,%m,%d,%H,%M,%S’）：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">format格式</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">%Y，%y</td>
+<td style="text-align:center">年</td>
+</tr>
+<tr>
+<td style="text-align:center">%m</td>
+<td style="text-align:center">月</td>
+</tr>
+<tr>
+<td style="text-align:center">%d</td>
+<td style="text-align:center">日</td>
+</tr>
+<tr>
+<td style="text-align:center">%H</td>
+<td style="text-align:center">时</td>
+</tr>
+<tr>
+<td style="text-align:center">%M</td>
+<td style="text-align:center">分</td>
+</tr>
+<tr>
+<td style="text-align:center">%S</td>
+<td style="text-align:center">秒</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-查看进程信息：ps"><a href="#3-查看进程信息：ps" class="headerlink" title="3.查看进程信息：ps"></a>3.查看进程信息：ps</h3><p>进程是一个具有一定独立功能的程序，它是操作系统动态执行的基本单元。</p>
+<p>ps命令可以查看进程的详细状况，常用选项(选项可以不加“-”)如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">选项</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-a</td>
+<td style="text-align:center">显示终端上的所有进程，包括其他用户的进程</td>
+</tr>
+<tr>
+<td style="text-align:center">-u</td>
+<td style="text-align:center">显示进程的详细状态</td>
+</tr>
+<tr>
+<td style="text-align:center">-x</td>
+<td style="text-align:center">显示没有控制终端的进程</td>
+</tr>
+<tr>
+<td style="text-align:center">-w</td>
+<td style="text-align:center">显示加宽，以便显示更多的信息</td>
+</tr>
+<tr>
+<td style="text-align:center">-r</td>
+<td style="text-align:center">只显示正在运行的进程</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-动态显示进程：top"><a href="#4-动态显示进程：top" class="headerlink" title="4.动态显示进程：top"></a>4.动态显示进程：top</h3><p>top命令用来动态显示运行中的进程。top命令能够在运行后，在指定的时间间隔更新显示信息。可以在使用top命令时加上-d 来指定显示信息更新的时间间隔。</p>
+<p>在top命令执行后，可以按下按键得到对显示的结果进行排序：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">选项</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">M</td>
+<td style="text-align:center">根据内存使用量来排序</td>
+</tr>
+<tr>
+<td style="text-align:center">P</td>
+<td style="text-align:center">根据CPU占有率来排序</td>
+</tr>
+<tr>
+<td style="text-align:center">T</td>
+<td style="text-align:center">根据进程运行时间的长短来排序</td>
+</tr>
+<tr>
+<td style="text-align:center">U</td>
+<td style="text-align:center">可以根据后面输入的用户名来筛选进程</td>
+</tr>
+<tr>
+<td style="text-align:center">K</td>
+<td style="text-align:center">可以根据后面输入的PID来杀死进程。</td>
+</tr>
+<tr>
+<td style="text-align:center">q</td>
+<td style="text-align:center">退出</td>
+</tr>
+<tr>
+<td style="text-align:center">h</td>
+<td style="text-align:center">获得帮助</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-终止进程：kill"><a href="#5-终止进程：kill" class="headerlink" title="5.终止进程：kill"></a>5.终止进程：kill</h3><p>kill命令指定进程号的进程，需要配合 ps 使用。</p>
+<p>使用格式：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">kill</span> <span class="token punctuation">[</span>-signal<span class="token punctuation">]</span> pid
 </code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
+<p>信号值从0到15，其中9为绝对终止，可以处理一般信号无法终止的进程。</p>
+<p>kill 9133 ：9133 为应用程序所对应的进程号<br>有些进程不能直接杀死，这时候我们需要加一个参数“ -9 ”，“ -9 ” 代表强制结束：</p>
+<h3 id="6-关机重启：reboot、shutdown、init"><a href="#6-关机重启：reboot、shutdown、init" class="headerlink" title="6.关机重启：reboot、shutdown、init"></a>6.关机重启：reboot、shutdown、init</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">reboot</td>
+<td style="text-align:center">重新启动操作系统</td>
+</tr>
+<tr>
+<td style="text-align:center">shutdown –r now</td>
+<td style="text-align:center">重新启动操作系统，shutdown会给别的用户提示</td>
+</tr>
+<tr>
+<td style="text-align:center">shutdown -h now</td>
+<td style="text-align:center">立刻关机，其中now相当于时间为0的状态</td>
+</tr>
+<tr>
+<td style="text-align:center">shutdown -h 20:25</td>
+<td style="text-align:center">系统在今天的20:25 会关机</td>
+</tr>
+<tr>
+<td style="text-align:center">shutdown -h +10</td>
+<td style="text-align:center">系统再过十分钟后自动关机</td>
+</tr>
+<tr>
+<td style="text-align:center">init 0</td>
+<td style="text-align:center">关机</td>
+</tr>
+<tr>
+<td style="text-align:center">init 6</td>
+<td style="text-align:center">重启</td>
+</tr>
+</tbody>
+</table>
+<h3 id="7-检测磁盘空间：df"><a href="#7-检测磁盘空间：df" class="headerlink" title="7.检测磁盘空间：df"></a>7.检测磁盘空间：df</h3><p>df命令用于检测文件系统的磁盘空间占用和空余情况，可以显示所有文件系统对节点和磁盘块的使用情况。<br>选项|含义|<br>:–:|:–:|<br>-a     |显示所有文件系统的磁盘使用情况<br>-m     |以1024字节为单位显示<br>-t     |显示各指定文件系统的磁盘空间使用情况<br>-T     |显示文件系统</p>
+<h3 id="8-检测目录所占磁盘空间：du"><a href="#8-检测目录所占磁盘空间：du" class="headerlink" title="8.检测目录所占磁盘空间：du"></a>8.检测目录所占磁盘空间：du</h3><p>du命令用于统计目录或文件所占磁盘空间的大小，该命令的执行结果与df类似，du更侧重于磁盘的使用状况。</p>
+<p>du命令的使用格式如下： du [选项] 目录或文件名</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-a</td>
+<td style="text-align:center">递归显示指定目录中各文件和子目录中文件占用的数据块</td>
+</tr>
+<tr>
+<td style="text-align:center">-s</td>
+<td style="text-align:center">显示指定文件或目录占用的数据块</td>
+</tr>
+<tr>
+<td style="text-align:center">-b</td>
+<td style="text-align:center">以字节为单位显示磁盘占用情况</td>
+</tr>
+<tr>
+<td style="text-align:center">-l</td>
+<td style="text-align:center">计算所有文件大小，对硬链接文件计算多次</td>
+</tr>
+</tbody>
+</table>
+<h3 id="9-查看或配置网卡信息：ifconfig"><a href="#9-查看或配置网卡信息：ifconfig" class="headerlink" title="9.查看或配置网卡信息：ifconfig"></a>9.查看或配置网卡信息：ifconfig</h3><p>我们只是敲：ifconfig，它会显示所有网卡的信息</p>
+<h3 id="10-测试远程主机连通性：ping"><a href="#10-测试远程主机连通性：ping" class="headerlink" title="10.测试远程主机连通性：ping"></a>10.测试远程主机连通性：ping</h3><pre class=" language-bash"><code class="language-bash"><span class="token function">ping</span> www.baidu.com
 </code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
-</code></pre>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
             </div>
             <hr/>
@@ -435,7 +626,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://trybio.github.io" class="b-link-green">生信小札</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/10/14/hello-world/" class="b-link-green">Hello World</a>
+                    <a href="/2019/01/22/linux-ming-ling-xi-tong-guan-li/" class="b-link-green">Linux命令-系统管理</a>
                 </p>
             </div>
         </div>
@@ -457,7 +648,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2018-10-14T19-23-26',
+        id: '2019-01-22T14-33-49',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -477,28 +668,27 @@
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">上一篇</div>
             <div class="card">
-                <a href="/2018/10/17/sheng-xin-xue-xi-cong-zhi-zuo-bo-ke-kai-shi/">
+                <a href="/2019/01/22/bian-ji-qi-zhi-shen-vim/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="生信学习从制作博客开始">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="编辑器之神-vim">
                         
-                        <span class="card-title">生信学习从制作博客开始</span>
+                        <span class="card-title">编辑器之神-vim</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">借用名言：培根说：读书使人充实，讨论使人机敏，写作使人精确。
-最近用hexo搭建了一个博客系统并部署在了GitHub，希望通过写作来记录自己的生信学习之路，好让我更好的去思考问题；也希望以这种方式来监督提醒自己在这条喜欢的路上走下去，再回首</div>
+                    <div class="summary">vi简介vi是“Visual interface”的简称，它在Linux上的地位就仿佛Edit程序在DOS上一样。它可以执行输出、删除、查找、替换、块操作等众多文本操作，而且用户可以根据自己的需要对其进行定制。Vi不是一个排版程序，它不象W</div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-10-17
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-22
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/博客/" class="post-category" target="_blank">
-                                    博客
+                            <a href="/categories/vim/" class="post-category" target="_blank">
+                                    vim
                                 </a>
                             
                             
@@ -508,8 +698,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/博客/" target="_blank">
-                        <span class="chip bg-color">博客</span>
+                    <a href="/tags/vim/" target="_blank">
+                        <span class="chip bg-color">vim</span>
                     </a>
                     
                 </div>
@@ -519,32 +709,44 @@
         
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">本篇</div>
+            <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2018/10/14/hello-world/">
+                <a href="/2019/01/22/linux-ming-ling-yong-hu-quan-xian-guan-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Linux命令-用户、权限管理">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">Linux命令-用户、权限管理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex</div>
+                    <div class="summary">Linux命令-用户、权限管理用户是Unix/Linux系统工作中重要的一环，用户管理包括用户与组账号的管理。
+在Unix/Linux系统中，不论是由本机或是远程登录系统，每个系统都必须拥有一个账号，并且对于不同的系统资源拥有不同的使用权限</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-10-14
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-22
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fa fa-user fa-fw"></i>
-                            生信小札
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Linux/" class="post-category" target="_blank">
+                                    Linux
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/" target="_blank">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

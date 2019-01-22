@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://trybio.github.io/"/>
-  <updated>2018-10-14T11:23:26.851Z</updated>
+  <updated>2019-01-22T07:11:52.840Z</updated>
   <id>http://trybio.github.io/</id>
   
   <author>
@@ -17,11 +17,250 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Linux常用服务器构建-ssh和scp</title>
+    <link href="http://trybio.github.io/2019/01/22/linux-chang-yong-fu-wu-qi-gou-jian-ssh-he-scp/"/>
+    <id>http://trybio.github.io/2019/01/22/linux-chang-yong-fu-wu-qi-gou-jian-ssh-he-scp/</id>
+    <published>2019-01-22T07:07:44.018Z</published>
+    <updated>2019-01-22T07:11:52.840Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-ssh&quot;&gt;&lt;a href=&quot;#1-ssh&quot; class=&quot;headerlink&quot; title=&quot;1.ssh&quot;&gt;&lt;/a&gt;1.ssh&lt;/h3&gt;&lt;h5 id=&quot;ssh介绍&quot;&gt;&lt;a href=&quot;#ssh介绍&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://trybio.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://trybio.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vim分屏操作</title>
+    <link href="http://trybio.github.io/2019/01/22/vim-fen-ping-cao-zuo/"/>
+    <id>http://trybio.github.io/2019/01/22/vim-fen-ping-cao-zuo/</id>
+    <published>2019-01-22T06:57:18.789Z</published>
+    <updated>2019-01-22T07:05:05.477Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;分屏操作:&lt;/p&gt;
+&lt;pre class=&quot; language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;sp: 上下分屏,后可跟文件名 
+
+vsp: 左右分屏,后可跟文件名
+
+Ctr+w+w:
+        
+      
+    
+    </summary>
+    
+      <category term="vim" scheme="http://trybio.github.io/categories/vim/"/>
+    
+    
+      <category term="vim" scheme="http://trybio.github.io/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>编辑器之神-vim</title>
+    <link href="http://trybio.github.io/2019/01/22/bian-ji-qi-zhi-shen-vim/"/>
+    <id>http://trybio.github.io/2019/01/22/bian-ji-qi-zhi-shen-vim/</id>
+    <published>2019-01-22T06:45:10.405Z</published>
+    <updated>2019-01-22T06:54:43.195Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;vi简介&quot;&gt;&lt;a href=&quot;#vi简介&quot; class=&quot;headerlink&quot; title=&quot;vi简介&quot;&gt;&lt;/a&gt;vi简介&lt;/h2&gt;&lt;p&gt;vi是“Visual
+        
+      
+    
+    </summary>
+    
+      <category term="vim" scheme="http://trybio.github.io/categories/vim/"/>
+    
+    
+      <category term="vim" scheme="http://trybio.github.io/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux命令-系统管理</title>
+    <link href="http://trybio.github.io/2019/01/22/linux-ming-ling-xi-tong-guan-li/"/>
+    <id>http://trybio.github.io/2019/01/22/linux-ming-ling-xi-tong-guan-li/</id>
+    <published>2019-01-22T06:33:49.820Z</published>
+    <updated>2019-01-22T06:44:32.350Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-查看当前日历：cal&quot;&gt;&lt;a href=&quot;#1-查看当前日历：cal&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://trybio.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://trybio.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux命令-用户、权限管理</title>
+    <link href="http://trybio.github.io/2019/01/22/linux-ming-ling-yong-hu-quan-xian-guan-li/"/>
+    <id>http://trybio.github.io/2019/01/22/linux-ming-ling-yong-hu-quan-xian-guan-li/</id>
+    <published>2019-01-22T05:57:09.254Z</published>
+    <updated>2019-01-22T06:26:40.745Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Linux命令-用户、权限管理&quot;&gt;&lt;a href=&quot;#Linux命令-用户、权限管理&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://trybio.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://trybio.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux常用基本命令</title>
+    <link href="http://trybio.github.io/2019/01/22/linux-chang-yong-ji-ben-ming-ling/"/>
+    <id>http://trybio.github.io/2019/01/22/linux-chang-yong-ji-ben-ming-ling/</id>
+    <published>2019-01-22T05:44:36.094Z</published>
+    <updated>2019-01-22T05:56:44.547Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;常用基本命令&quot;&gt;&lt;a href=&quot;#常用基本命令&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://trybio.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://trybio.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux命令-文件、磁盘管理</title>
+    <link href="http://trybio.github.io/2019/01/22/linux-mu-lu/"/>
+    <id>http://trybio.github.io/2019/01/22/linux-mu-lu/</id>
+    <published>2019-01-22T03:35:01.673Z</published>
+    <updated>2019-01-22T05:43:32.386Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;文件管理&quot;&gt;&lt;a href=&quot;#文件管理&quot; class=&quot;headerlink&quot; title=&quot;文件管理&quot;&gt;&lt;/a&gt;文件管理&lt;/h2&gt;&lt;h3 id=&quot;1-查看文件信息：ls&quot;&gt;&lt;a href=&quot;#1-查看文件信息：ls&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://trybio.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://trybio.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>工欲善其事必先利其器</title>
+    <link href="http://trybio.github.io/2019/01/22/gong-yu-shan-qi-shi-bi-xian-li-qi-qi/"/>
+    <id>http://trybio.github.io/2019/01/22/gong-yu-shan-qi-shi-bi-xian-li-qi-qi/</id>
+    <published>2019-01-22T02:11:44.531Z</published>
+    <updated>2019-01-22T06:31:24.300Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;大道至简&quot;&gt;&lt;a href=&quot;#大道至简&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://trybio.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://trybio.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>生信学习从制作博客开始</title>
+    <link href="http://trybio.github.io/2018/10/17/sheng-xin-xue-xi-cong-zhi-zuo-bo-ke-kai-shi/"/>
+    <id>http://trybio.github.io/2018/10/17/sheng-xin-xue-xi-cong-zhi-zuo-bo-ke-kai-shi/</id>
+    <published>2018-10-17T11:48:02.009Z</published>
+    <updated>2019-01-22T06:27:00.616Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;借用名言：&quot;&gt;&lt;a href=&quot;#借用名言：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="博客" scheme="http://trybio.github.io/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="博客" scheme="http://trybio.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="http://trybio.github.io/2018/10/14/hello-world/"/>
     <id>http://trybio.github.io/2018/10/14/hello-world/</id>
     <published>2018-10-14T11:23:26.851Z</published>
-    <updated>2018-10-14T11:23:26.851Z</updated>
+    <updated>2018-10-17T13:03:21.784Z</updated>
     
     <summary type="html">
     
